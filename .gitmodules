@@ -1,3 +1,6 @@
 [submodule "lib/engine"]
 	path = lib/engine
 	url = git@github.com:playcanvas/engine.git
+[submodule "lib/playcanvas-blender-tools"]
+	path = lib/playcanvas-blender-tools
+	url = git@github.com:sdfgeoff/playcanvas-blender-tools.git
