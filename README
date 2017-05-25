@@ -1,0 +1,9 @@
+Playcanvas is great, but I like having everything local to my computer rather
+than working in the cloud. I also don't like uploading assets every time
+I change something. As a result, I developed this project template.
+It has the following features:
+
+ - Converts models from .blend format to playcanvas format
+ - Nicely seperates source from output
+ - Builds playcanvas for you (requires Node and npm)
+ - can type 'make test' to open your project in a web browser.
