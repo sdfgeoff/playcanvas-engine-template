@@ -15,10 +15,16 @@ import export
 
 bin_dir = os.path.join(project_dir, 'bin')
 file_name = os.path.split(bpy.context.blend_data.filepath)[-1]
-file_name = file_name.split('.')[0] + '.json'
+file_name = file_name.split('.')[0]
+
+path_data = {
+    'name': file_name,
+    'mesh': os.path.join(bin_dir, 'Meshes'),
+    'mat': os.path.join(bin_dir, 'Materials'),
+    'img': os.path.join(bin_dir, 'Textures'),
+}
+
 export.do_export(None,
-    os.path.join(bin_dir, file_name),
-    os.path.join(bin_dir, './Meshes'),
-    os.path.join(bin_dir, './Materials'),
-    os.path.join(bin_dir, './Textures')
+    path_data,
+    True
 )

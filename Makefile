@@ -16,10 +16,11 @@ $(PLAYCANVAS): ./lib/engine/src/*
 	node build.js -l 1 -o ../../../$(PLAYCANVAS)
 
 models: $(MODELS)
-	# Exports models from blender, puts them in bin/models. The exporter
-	# script automagically deals with textures, copying them to a place
-	# relative to the model directory
-	for model in $(MODELS) ; do \
+	@# Exports models from blender, puts them in bin/models. The exporter
+	@# script automagically deals with textures, copying them to a place
+	@# relative to the model directory
+	@for model in $(MODELS) ; do \
+		echo Processing Model $$model; \
         blender $$model -b --python $(PLAYCANVAS_EXPORT_HELPER); \
     done
 
